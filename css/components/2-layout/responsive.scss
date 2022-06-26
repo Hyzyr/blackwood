@@ -1,0 +1,192 @@
+//max-width: 1280px
+@include xxlg-xxxlg {
+  .search {
+    &__inner {
+      &-header {
+        &-title {
+          &-ico {
+            width: 45px;
+            height: 45px;
+            margin-right: 10px;
+          }
+          h2 {
+            font-size: 28px;
+          }
+        }
+        &-content {
+          .input {
+            width: 280px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//max-width: 1024px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+}
+
+//max-width: 1024px
+@include md-lg {
+  .search {
+    &__inner {
+      &-header {
+        padding: 30px 0 10px 0;
+        flex-wrap: wrap;
+        &-title {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        &-content {
+          flex-direction: row-reverse;
+          width: 100%;
+          .input {
+            width: 280px;
+            margin: 0 auto 0 0;
+          }
+        }
+      }
+      &-body {
+        height: calc(100vh - 160px);
+      }
+      .hide {
+        display: none;
+      }
+    }
+  }
+}
+
+@include xsm-sm {
+  .auto__container {
+    padding: 0 20px;
+  }
+  .search {
+    &__inner {
+      &-header {
+        padding: 30px 0 10px 0;
+        &-title {
+          margin-bottom: 8px;
+          &-ico {
+            width: 35px;
+            height: 35px;
+          }
+          h2 {
+            font-size: 22px;
+          }
+        }
+        &-content {
+          .input {
+            input {
+              height: 35px;
+              font-size: 14px;
+            }
+          }
+          .icoButton {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+      &-body {
+        &-table {
+          height: calc(100% - 68px);
+        }
+      }
+    }
+  }
+  .pagging {
+    height: 35px;
+    &__button {
+      min-width: 30px;
+      &--prev,
+      &--next {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+@include xxsm-xsm {
+  .auto__container {
+    padding: 0 15px;
+  }
+  .search {
+    &__inner {
+      &-header {
+        padding: 25px 0 5px 0;
+        &-title {
+          margin-bottom: 6px;
+        }
+        &-content {
+          flex-direction: row-reverse;
+          flex-wrap: wrap;
+
+          .input {
+            width: 100%;
+            margin: 0 0 6px 0;
+            order: -1;
+          }
+          .icoButton {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+      &-body {
+        &-table {
+          height: calc(100% - 60px);
+        }
+      }
+      .tooltip {
+        &__text {
+          display: none;
+        }
+      }
+    }
+  }
+  .pagging {
+    height: 30px;
+
+    &__button {
+      min-width: unset;
+      font-size: 12px;
+      padding: 0 10px;
+      &--prev,
+      &--next {
+        svg {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include xxxsm-xxsm {
+  .search {
+    &__inner {
+      &-body {
+        &-paging {
+          padding: 10px 10px 15px 10px;
+        }
+      }
+    }
+  }
+  .pagging {
+    &__button {
+      padding: 0 8px;
+      &--prev,
+      &--next {
+        svg {
+          display: block;
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

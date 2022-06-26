@@ -1,0 +1,92 @@
+@mixin smallScroll {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgba($color: $primary-1, $alpha: 0.2);
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba($color: $primary-1, $alpha: 0.3);
+  }
+}
+@mixin fullImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+
+@mixin hideScrollBar {
+  & {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
+
+@mixin ellipsisOneLine {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+///////////////// media queries
+@mixin xxxsm-xxsm-extra {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+@mixin xxxsm-xxsm {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin xxsm-xsm {
+  @media (max-width: 540px) {
+    @content;
+  }
+}
+@mixin xsm-sm {
+  @media (max-width: 660px) {
+    @content;
+  }
+}
+@mixin sm-md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin md-lg {
+  @media (max-width: 840px) {
+    @content;
+  }
+}
+@mixin lg-xlg {
+  @media (max-width: 980px) {
+    @content;
+  }
+}
+@mixin xlg-xxlg {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin xxlg-xxxlg {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
